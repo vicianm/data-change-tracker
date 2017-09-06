@@ -19,7 +19,7 @@ public class DataChangeTracker {
 		mChangedDataIds = new LinkedHashSet<Object>();
 	}
 	
-	protected void setDataChangeEventDispatcher(DataChangeEventDispatcher eventDispatcher) {
+	public void setDataChangeEventDispatcher(DataChangeEventDispatcher eventDispatcher) {
 		mEventDispatcher = eventDispatcher;
 	}
 	
