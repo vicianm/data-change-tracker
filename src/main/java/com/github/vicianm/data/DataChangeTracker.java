@@ -14,7 +14,7 @@ public class DataChangeTracker {
 	
 	protected DataChangeEventDispatcher mEventDispatcher;
 
-	protected DataChangeTracker() {
+	public DataChangeTracker() {
 		// TODO write test that DCT returns changed data in the same order in which the data have been changed
 		mChangedDataIds = new LinkedHashSet<Object>();
 	}

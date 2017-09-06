@@ -13,7 +13,7 @@ import java.util.Set;
  * @see #removeListener(DataChangeListener)
  * @see #notifyDataSetChanged()
  */
-class DataChangeEventDispatcher {
+public class DataChangeEventDispatcher {
 
 	public static final String TAG = DataChangeEventDispatcher.class.getSimpleName();
 	
@@ -23,23 +23,23 @@ class DataChangeEventDispatcher {
 	
 	protected boolean mNofityActive = false;
 	
-	protected DataChangeEventDispatcher() {
+	public DataChangeEventDispatcher() {
 		mListeners = new HashMap<DataChangeListener, Object[]>();
 	}
 	
-	protected void setDataChangeTracker(DataChangeTracker dataChangeTracker) {
+	public void setDataChangeTracker(DataChangeTracker dataChangeTracker) {
 		mDataChangeTracker = dataChangeTracker;
 	}
 	
-	protected void addListener(DataChangeListener listener, Object... dataIds) {
+	public void addListener(DataChangeListener listener, Object... dataIds) {
 		mListeners.put(listener, dataIds);
 	}
 	
-	protected void removeListener(DataChangeListener listener) {
+	public void removeListener(DataChangeListener listener) {
 		mListeners.remove(listener);
 	}
 	
-	protected void notifyDataSetChanged() {
+	public void notifyDataSetChanged() {
 		
 		assertNotifyIsNotActive();
 		
