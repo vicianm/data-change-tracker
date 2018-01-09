@@ -65,6 +65,8 @@ public class DataChangeEventDispatcher {
 		}
 		
 		mNofityActive = false;
+
+		mDataChangeTracker.clearDataChanges();
 	}
 	
 	protected void debugNotify() {
